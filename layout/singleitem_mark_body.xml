@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_large">
+
+        <LinearLayout
+            android:id="@+id/expand_button"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="20dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:rotation="180">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_black"
+                android:backgroundTint="@color/grey_80"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/grey_80" />
+
+        <View
+            android:layout_width="@dimen/spacing_large"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/textView_subjectmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:text="150"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/spacing_large" />
+
+        <View
+            android:layout_width="@dimen/spacing_smlarge"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

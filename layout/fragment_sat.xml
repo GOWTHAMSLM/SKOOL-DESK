@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".timetable.SatFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tuerecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_cyc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:padding="12dp"
+            android:id="@+id/timetable_icn_sat"
+            app:srcCompat="@drawable/ic_calendar"
+            android:tint="@color/grey_40"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Timetable"
+            android:id="@+id/timetable_txt_sat"
+            android:gravity="center"
+            android:textSize="@dimen/spacing_mlarge" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

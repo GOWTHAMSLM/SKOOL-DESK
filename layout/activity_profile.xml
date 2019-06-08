@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolbar" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        android:background="@color/bc"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/student_parent_avator"
+                app:civ_border="true"
+                app:civ_border_color="@color/overlay_light_90"
+                app:civ_border_width="3dp" />
+
+            <TextView
+                android:id="@+id/usr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="James Pratterson"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@color/grey_90" />
+
+            <TextView
+                android:id="@+id/usr_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="909 253 9939"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/grey_60" />
+
+            <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="1dp"
+                android:visibility="visible"
+                android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_mlarge"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Childrens"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="1dp"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_mlarge"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="@dimen/spacing_middle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="Reset Password"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/pass_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_rounded_orange"
+                        android:text="u p d a t e"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="10dp"/>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/grey_40"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/grey_40"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:theme="@style/EditText.Grey"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginLeft="-4dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/grey_40"
+                        android:singleLine="true"
+                        android:hint="Current Password"
+                        android:maxLines="1"
+                        android:maxLength="10"
+                        android:textSize="15dp"
+                        android:id="@+id/current_password"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/grey_40"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/grey_40"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:theme="@style/EditText.Grey"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginLeft="-4dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/grey_40"
+                        android:singleLine="true"
+                        android:hint="New Password"
+                        android:maxLines="1"
+                        android:maxLength="10"
+                        android:textSize="15dp"
+                        android:id="@+id/new_password"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
